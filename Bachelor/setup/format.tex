@@ -65,13 +65,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setmainfont{TeX Gyre Termes}
-\setmainfont{Latin Modern Roman}
-%\setsansfont{TeX Gyre Heros}
-\setmonofont{Latin Modern Mono}
-%\setCJKmainfont[BoldFont={方正小标宋简体}]{方正书宋简体}    % 宋体  
-\setCJKmainfont[BoldFont={方正小标宋简体}]{Adobe Song Std}    % 宋体  
-\setCJKsansfont{Adobe Heiti Std}
-\setCJKmonofont{Adobe Fangsong Std}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+%\setCJKmainfont[BoldFont={方正小标宋简体}]{Adobe Song Std}    % 宋体  
+%\setCJKsansfont{Adobe Heiti Std}
+%\setCJKmonofont{Adobe Fangsong Std}
+\setCJKmainfont{SimSun}    % 宋体  
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong_GB2312}
 
 %\setCJKfamilyfont{song}[BoldFont={方正宋黑简体}]{SimSun}      	% 宋体  
 %\setCJKfamilyfont{song}[BoldFont={方正宋三_GBK}]{方正博雅宋_GBK}  % 宋体  
@@ -80,11 +81,12 @@
 %\setCJKfamilyfont{song}[BoldFont={方正大标宋_GBK}]{方正兰亭宋_GBK}    % 宋体  
 %\setCJKfamilyfont{song}[BoldFont={方正小标宋简体}]{方正书宋简体}    % 宋体  
 %文泉驿微米黑
-\setCJKfamilyfont{song}[BoldFont={方正小标宋简体}]{Adobe Song Std}    % 宋体  
-\setCJKfamilyfont{hei}{Adobe Heiti Std}      	% 黑体  
-\setCJKfamilyfont{kai}{AR PL UKai TW MBE}      	% 楷体  
-%\setCJKfamilyfont{fang}{Adobe Fangsong Std}  	% 仿宋体
-\setCJKfamilyfont{nwpulogo}{nwpulogo}        	% 含"西北工业大学"logo字体 
+%\setCJKfamilyfont{song}[BoldFont={方正小标宋简体}]{Adobe Song Std}    % 宋体  
+\setCJKfamilyfont{song}{SimSun}    			% 宋体  
+\setCJKfamilyfont{hei}{SimHei}      		% 黑体  
+\setCJKfamilyfont{kai}{KaiTi_GB2312}      	% 楷体  
+\setCJKfamilyfont{fang}{Fangsong_GB2312}  	% 仿宋体
+\setCJKfamilyfont{nwpulogo}{nwpulogo}     	% 含"西北工业大学"logo字体 
 
 \newcommand{\song}{\CJKfamily{song}}
 \newcommand{\hei}{\CJKfamily{hei}}
@@ -285,14 +287,14 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\captionfont}{\CJKfamily{song}\rmfamily}
-\renewcommand{\captionlabelfont}{\CJKfamily{song}\rmfamily}
-
-% 按清华标准, 去掉图表号后面的:
-\renewcommand{\captionlabeldelim}{\hspace{1em}}
-
-% 按清华标准, 图表标题字体为11pt, 这里写作大五号
-\renewcommand{\captionfont}{\wuhao}
+% \renewcommand{\captionfont}{\CJKfamily{song}\rmfamily}
+% \renewcommand{\captionlabelfont}{\CJKfamily{song}\rmfamily}
+% 
+% % 按清华标准, 去掉图表号后面的:
+% \renewcommand{\captionlabeldelim}{\hspace{1em}}
+% 
+% % 按清华标准, 图表标题字体为11pt, 这里写作大五号
+% \renewcommand{\captionfont}{\wuhao}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 定义题头格言的格式
@@ -355,14 +357,13 @@
 
 \setlength{\headheight}{24pt}
 
+\newfontfamily\codefont{TeX Gyre Cursor}
 \newfontfamily\pagella{TeX Gyre Pagella}
-\newfontfamily\monaco{Monaco}
-\newfontfamily\droidmono{Droid Sans Mono}
 
 \lstdefinelanguage{nesc}
   {morekeywords={components, configuration, event, generic, implementation, includes, interface, module,new, norace, post, provides, signal, task, uses,nx\_struct, nx\_union,command,uint16\_t,uint8\_t,uint32\_t,as,void},sensitive=false,morecomment=[l]{//},morecomment=[s]{/*}{*/},morestring=[b]",}
 
-\lstset{basicstyle=\droidmono\footnotesize,keywordstyle=\color{blue},commentstyle=\color{green},stringstyle=\color{red},tabsize=4,frameround=ffff,escapeinside=``,lineskip=1pt,framerule=0.5pt,xleftmargin=20pt,xrightmargin=10pt,language=nesc,frame=tb,captionpos=b,abovecaptionskip=10pt,numbers=left, framexleftmargin=5mm}
+\lstset{basicstyle=\codefont\footnotesize,keywordstyle=\color{blue},commentstyle=\color{green},stringstyle=\color{red},tabsize=4,frameround=ffff,escapeinside=``,lineskip=1pt,framerule=0.5pt,xleftmargin=20pt,xrightmargin=10pt,language=nesc,frame=tb,captionpos=b,abovecaptionskip=10pt,numbers=left, framexleftmargin=5mm}
 %\lstset{basicstyle=\droidmono\footnotesize,tabsize=4,frameround=ffff,escapeinside=``,lineskip=1pt,framerule=0.5pt,xleftmargin=20pt,xrightmargin=10pt,language=nesc,frame=tb,captionpos=b,abovecaptionskip=10pt,numbers=left, framexleftmargin=5mm}
 
 \renewcommand\arraystretch{1.25}
